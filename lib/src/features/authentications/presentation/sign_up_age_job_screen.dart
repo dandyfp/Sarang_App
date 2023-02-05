@@ -1,31 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:sarang/src/common_widgets/custom_button_widget.dart';
-import 'package:sarang/src/common_widgets/custom_text_button_widget.dart';
-import 'package:sarang/src/common_widgets/custom_textfield_widget.dart';
-import 'package:sarang/src/features/authentications/presentation/sign_up_age_job_screen.dart';
 import 'package:sarang/src/theme_manager/dimens_manager.dart';
 import 'package:sarang/src/theme_manager/images_manager.dart';
 import 'package:sarang/src/theme_manager/styles_manager.dart';
 import 'package:sarang/src/utils/scalable_dp.dart';
 import 'package:sarang/src/utils/ui_utils.dart';
 
-class SignUpScreen extends StatefulWidget {
-  static const String routeName = '/sign-up';
-  const SignUpScreen({super.key});
+import '../../../common_widgets/custom_textfield_widget.dart';
+
+class SignUpAgeJobScreen extends StatefulWidget {
+  static const String routeName = '/sign-up-age-job';
+  const SignUpAgeJobScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignUpAgeJobScreen> createState() => _SignUpAgeJobScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  final nameController = TextEditingController();
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+class _SignUpAgeJobScreenState extends State<SignUpAgeJobScreen> {
+  final jobController = TextEditingController();
+  final ageController = TextEditingController();
   @override
   void dispose() {
-    nameController.clear();
-    emailController.clear();
-    passwordController.clear();
+    jobController.clear();
+    ageController.clear();
+    // TODO: implement dispose
     super.dispose();
   }
 
@@ -58,29 +56,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Image.asset(photoScreen),
               verticalSpace(SDP.sdp(s50)),
               CustomTextfieldWidget(
-                  labelName: 'Complete Name',
-                  controller: nameController,
-                  hintText: 'Write your name'),
+                  labelName: 'Occupation',
+                  controller: jobController,
+                  hintText: 'Write your Occupation'),
               CustomTextfieldWidget(
-                  labelName: 'Email Address',
-                  controller: emailController,
-                  hintText: 'Write your email address'),
-              CustomTextfieldWidget(
-                  labelName: 'Password',
-                  controller: passwordController,
-                  hintText: 'Write your scurity'),
-              verticalSpace(SDP.sdp(s16)),
+                  labelName: 'Age',
+                  controller: ageController,
+                  hintText: 'Write your age'),
+              verticalSpace(SDP.sdp(131.0)),
               CustomButtonWidget(
                 ontap: () {
                   Navigator.pushNamed(context, SignUpAgeJobScreen.routeName);
                 },
-                title: 'Get Started',
+                title: 'Continue Sign Up',
               ),
-              verticalSpace(SDP.sdp(s20)),
-              CustomTextButton(
-                title: 'Sign in to My account',
-                onPressed: () {},
-              )
             ],
           ),
         ),
