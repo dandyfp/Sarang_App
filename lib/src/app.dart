@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sarang/src/features/authentications/presentation/sign_up_age_job_screen.dart';
 import 'package:sarang/src/features/authentications/presentation/sign_up_screen.dart';
 import 'package:sarang/src/theme_manager/theme_data.dart';
 
@@ -13,7 +14,10 @@ class AppScreen extends StatelessWidget {
       title: 'Flutter Demo',
       theme: getApplicationThemeData(),
       initialRoute: SignUpScreen.routeName,
-      routes: {SignUpScreen.routeName: (context) => const SignUpScreen()},
+      routes: {
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+        SignUpAgeJobScreen.routeName: (context) => const SignUpAgeJobScreen(),
+      },
     );
   }
 }

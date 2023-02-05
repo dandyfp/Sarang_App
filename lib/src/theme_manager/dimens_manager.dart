@@ -71,3 +71,25 @@ const double s36 = 36.0;
 const double s38 = 38.0;
 const double s40 = 40.0;
 const double s50 = 50.0;
+
+// Radius
+const double r2 = 2.0;
+const double r4 = 4.0;
+const double r6 = 6.0;
+const double r8 = 8.0;
+const double r10 = 10.0;
+const double r12 = 12.0;
+const double r14 = 14.0;
+const double r16 = 16.0;
+const double r18 = 18.0;
+const double r20 = 20.0;
+const double r22 = 22.0;
+const double r24 = 24.0;
+const double r28 = 28.0;
+const double r30 = 30.0;
+const double r32 = 32.0;
+const double r34 = 34.0;
+const double r36 = 36.0;
+const double r38 = 38.0;
+const double r40 = 40.0;
+const double r50 = 50.0;
