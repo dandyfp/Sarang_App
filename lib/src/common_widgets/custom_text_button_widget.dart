@@ -11,7 +11,7 @@ class CustomTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SDP.ini(context);
+    SDP.init(context);
     return TextButton(
       onPressed: onPressed,
       child: Text(

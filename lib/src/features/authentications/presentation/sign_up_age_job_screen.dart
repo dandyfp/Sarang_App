@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sarang/src/common_widgets/custom_button_widget.dart';
+import 'package:sarang/src/features/authentications/presentation/sign_up_upload_photo_screen.dart';
 import 'package:sarang/src/theme_manager/dimens_manager.dart';
 import 'package:sarang/src/theme_manager/images_manager.dart';
 import 'package:sarang/src/theme_manager/styles_manager.dart';
@@ -23,13 +24,12 @@ class _SignUpAgeJobScreenState extends State<SignUpAgeJobScreen> {
   void dispose() {
     jobController.clear();
     ageController.clear();
-    // TODO: implement dispose
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    SDP.ini(context);
+    SDP.init(context);
     return Scaffold(
       body: SafeArea(
           child: Padding(
@@ -66,7 +66,8 @@ class _SignUpAgeJobScreenState extends State<SignUpAgeJobScreen> {
               verticalSpace(SDP.sdp(131.0)),
               CustomButtonWidget(
                 ontap: () {
-                  Navigator.pushNamed(context, SignUpAgeJobScreen.routeName);
+                  Navigator.pushNamed(
+                      context, SignUpUploadPhotoScreen.routeName);
                 },
                 title: 'Continue Sign Up',
               ),

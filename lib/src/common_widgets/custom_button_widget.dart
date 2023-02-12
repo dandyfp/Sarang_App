@@ -15,7 +15,7 @@ class CustomButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SDP.ini(context);
+    SDP.init(context);
     return InkWell(
       onTap: ontap,
       child: Container(

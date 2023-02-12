@@ -5,7 +5,7 @@ class SDP {
   static double? widht;
   static BuildContext? context;
 
-  static void ini(BuildContext c) {
+  static void init(BuildContext c) {
     context = c;
     widht = MediaQuery.of(context!).size.width;
   }

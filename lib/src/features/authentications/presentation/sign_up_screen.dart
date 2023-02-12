@@ -31,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SDP.ini(context);
+    SDP.init(context);
     return Scaffold(
       body: SafeArea(
           child: Padding(
